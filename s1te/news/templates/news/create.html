@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Add title form{% endblock %}
+
+
+{% block content %}
+<div class="features" xmlns="http://www.w3.org/1999/html">
+        <h1>Add title form</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}
+            {{ form.anons }}
+            {{ form.full_text }}
+            {{ form.data }}
+
+            <input type="text" placeholder="Article name" class="form-control"><br>
+            <input type="text" placeholder="Anons Article" class="form-control"><br>
+            <textarea class="form-control" placeholder="Text stat`i"></textarea><br>
+            <input type="date" class="form-control"><br>
+            <input type="time" class="form-control"><br>
+            <button class="btn btn-success" type="submit">Publish</button>
+        </form>
+    </div>
+{% endblock %}

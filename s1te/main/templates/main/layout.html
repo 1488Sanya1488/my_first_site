@@ -1,4 +1,3 @@
-
 {% load static %}
 <!doctype html>
 <html lang="en">
@@ -20,7 +19,9 @@
         <ul>
             <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i>Main</li></a>
             <a href="{% url 'about' %}"><li><i class="fa-solid fa-address-card"></i>About</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-address-card"></i>News</li></a>
             <a href=""><li><i class="fa-solid fa-address-book"></i>Contacts</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle">Add article</i></li></a>
         </ul>
     </aside>
     <main>
