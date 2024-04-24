@@ -8,16 +8,11 @@
         <h1>Add title form</h1>
         <form method="post">
             {% csrf_token %}
-            {{ form.title }}
-            {{ form.anons }}
-            {{ form.full_text }}
-            {{ form.data }}
-
-            <input type="text" placeholder="Article name" class="form-control"><br>
-            <input type="text" placeholder="Anons Article" class="form-control"><br>
-            <textarea class="form-control" placeholder="Text stat`i"></textarea><br>
-            <input type="date" class="form-control"><br>
-            <input type="time" class="form-control"><br>
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.data }}<br>
+            <span>{{ error }}</span>
             <button class="btn btn-success" type="submit">Publish</button>
         </form>
     </div>
